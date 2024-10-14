@@ -1,3 +1,4 @@
+import AboutUs from '@/components/home-page/about-us'
 import Hero from '@/components/home-page/hero'
 import LogoCarousel from '@/components/home-page/logo-carousel'
 import Testimonials from '@/components/home-page/testimonials'
@@ -7,8 +8,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Testimonials />
+      <AboutUs />
       <LogoCarousel />
+      <Testimonials />
     </>
   )
 }
