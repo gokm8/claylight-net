@@ -5,8 +5,9 @@ export default function Hero() {
   return (
     <Section>
       <Container>
-        <h1>Hero</h1>
+        <h1 className='text-8xl font-bold'>Hero</h1>
         <p>- Hero -</p>
+        <p>Tests</p>
       </Container>
     </Section>
   )
