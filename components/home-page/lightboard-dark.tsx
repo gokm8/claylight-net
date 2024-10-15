@@ -1,26 +1,27 @@
-import React from 'react'
-import { LightBoard } from '../ui/light-board'
-import { Section } from '../craft'
+'use client'
 
-const DarkLightBoard = () => {
+import { Container, Section } from '../craft'
+import { LightBoard, PatternCell } from '../ui/light-board'
+
+export default function LightBoardDark() {
   return (
     <Section>
-      <LightBoard
-        gap={1}
-        lightSize={4}
-        rows={5}
-        text='C l a y L i g h t'
-        font='default'
-        updateInterval={100}
-        colors={{
-          drawLine: 'rgba(50, 50, 50, 0.7)',
-          background: '#111111',
-          textDim: 'rgba(80, 80, 80, 0.5)',
-          textBright: 'rgba(150, 150, 150, 0.9)'
-        }}
-      />
+      <div>
+        <LightBoard
+          rows={15}
+          lightSize={2}
+          gap={1}
+          text='Clay Light'
+          font='default'
+          updateInterval={300}
+          colors={{
+            background: '#1a1a1a',
+            textDim: 'rgba(80, 80, 80, 0.5',
+            drawLine: '#ffff99',
+            textBright: 'rgba(150, 150, 150, 0.9)'
+          }}
+        />
+      </div>
     </Section>
   )
 }
-
-export default DarkLightBoard

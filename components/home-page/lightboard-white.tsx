@@ -13,7 +13,6 @@ const LightBoardClay = () => {
         font='default'
         updateInterval={1000}
         colors={{
-          drawLine: 'rgba(255, 0, 0, 0.7)',
           background: 'rgba(0, 0, 0, 0.3)',
           textDim: 'rgba(50, 50, 50, 0.5)',
           textBright: 'rgba(255, 255, 255, 0.9)'
