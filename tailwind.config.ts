@@ -21,12 +21,22 @@ const config: Config = {
     },
     extend: {
       animation: {
-        'infinite-scroll': 'infinite-scroll 25s linear infinite'
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'marquee-horizontal': 'marquee-x var(--duration) infinite linear',
+        'marquee-vertical': 'marquee-y var(--duration) linear infinite'
       },
       keyframes: {
         'infinite-scroll': {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(0)' }
+        },
+        'marquee-x': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - var(--gap)))' }
+        },
+        'marquee-y': {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(calc(-100% - var(--gap)))' }
         }
       },
       colors: {
