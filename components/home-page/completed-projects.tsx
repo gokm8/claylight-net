@@ -9,35 +9,50 @@ import {
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Container, Section } from '../craft'
+import Balancer from 'react-wrap-balancer'
 
 const projects = [
   {
     title: 'LED Cirkel og Smiley for Rumors',
     description:
       'En kreativ LED installation i loftet med en cirkel og smiley, som skaber en unik atmosfære på natklubben.',
-    image: '/placeholder.svg?height=400&width=600',
+    image: '/projects/rumors.jpg',
     tags: ['Custom Lysinstallation', 'Custom Design', 'Smiley']
   },
   {
-    title: 'Health Tracking App',
+    title: 'LED Cirkel og Smiley for Rumors',
     description:
-      'Mobile application for tracking daily health metrics and providing personalized insights.',
-    image: '/placeholder.svg?height=400&width=600',
-    tags: ['React Native', 'Firebase', 'Machine Learning']
+      'En kreativ LED installation i loftet med en cirkel og smiley, som skaber en unik atmosfære på natklubben.',
+    image: '/projects/rumors.jpg',
+    tags: ['Custom Lysinstallation', 'Custom Design', 'Smiley']
   },
   {
-    title: 'Smart Home Dashboard',
+    title: 'LED Cirkel og Smiley for Rumors',
     description:
-      'Centralized dashboard for controlling and monitoring various smart home devices.',
-    image: '/placeholder.svg?height=400&width=600',
-    tags: ['Vue.js', 'IoT', 'WebSockets']
+      'En kreativ LED installation i loftet med en cirkel og smiley, som skaber en unik atmosfære på natklubben.',
+    image: '/projects/rumors.jpg',
+    tags: ['Custom Lysinstallation', 'Custom Design', 'Smiley']
   },
   {
-    title: 'Financial Analytics Tool',
+    title: 'LED Cirkel og Smiley for Rumors',
     description:
-      'Advanced analytics platform for financial data visualization and predictive modeling.',
-    image: '/placeholder.svg?height=400&width=600',
-    tags: ['Python', 'Django', 'D3.js']
+      'En kreativ LED installation i loftet med en cirkel og smiley, som skaber en unik atmosfære på natklubben.',
+    image: '/projects/rumors.jpg',
+    tags: ['Custom Lysinstallation', 'Custom Design', 'Smiley']
+  },
+  {
+    title: 'LED Cirkel og Smiley for Rumors',
+    description:
+      'En kreativ LED installation i loftet med en cirkel og smiley, som skaber en unik atmosfære på natklubben.',
+    image: '/projects/rumors.jpg',
+    tags: ['Custom Lysinstallation', 'Custom Design', 'Smiley']
+  },
+  {
+    title: 'LED Cirkel og Smiley for Rumors',
+    description:
+      'En kreativ LED installation i loftet med en cirkel og smiley, som skaber en unik atmosfære på natklubben.',
+    image: '/projects/rumors.jpg',
+    tags: ['Custom Lysinstallation', 'Custom Design', 'Smiley']
   }
 ]
 
@@ -56,7 +71,10 @@ export default function CompletedProjects() {
         </div>
         <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
           {projects.map((project, index) => (
-            <Card key={index} className='overflow-hidden'>
+            <Card
+              key={index}
+              className='overflow-hidden border-gray-200 bg-neutral-900 hover:border-2 hover:border-gray-200'
+            >
               <Image
                 src={project.image}
                 alt={project.title}
@@ -65,10 +83,12 @@ export default function CompletedProjects() {
                 className='h-48 w-full object-cover'
               />
               <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
+                <CardTitle className='text-gray-100'>{project.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>{project.description}</CardDescription>
+                <CardDescription className='text-gray-200'>
+                  <Balancer>{project.description}</Balancer>
+                </CardDescription>
               </CardContent>
               <CardFooter className='flex flex-wrap gap-2'>
                 {project.tags.map((tag, tagIndex) => (
