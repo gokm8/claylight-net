@@ -48,17 +48,20 @@ export default function AbousUs() {
             </p>
           </div>
           <div className='space-y-6'>
-            <div className='overflow-hidden rounded-xl'>
-              <Image
-                src='/placeholder.svg'
-                alt='Founders working together'
-                width={600}
-                height={400}
-                className='w-full object-cover'
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL="data:image/svg+xml;base64,..."
-              />
+            <div className='flex justify-end'>
+              <div className='relative w-3/4'>
+                <div className='absolute inset-0 z-10 bg-gradient-to-t from-black via-transparent to-black opacity-100'></div>
+                <div className='absolute inset-0 z-10 bg-gradient-to-r from-black via-transparent to-black opacity-100'></div>
+                <Image
+                  src='/pexels.jpg'
+                  alt='Grundlæggere arbejder sammen'
+                  width={600}
+                  height={400}
+                  className='hidden h-full w-full object-cover md:block'
+                  loading='lazy'
+                  blurDataURL='data:image/svg+xml;base64,...'
+                />
+              </div>
             </div>
             <div className='grid grid-cols-2 gap-4'>
               {stats.map((stat, index) => (
