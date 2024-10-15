@@ -1,4 +1,5 @@
 import AboutUs from '@/components/home-page/about-us'
+import CompletedProjects from '@/components/home-page/completed-projects'
 import Hero from '@/components/home-page/hero'
 import { HeroTwo } from '@/components/home-page/heroTwo'
 import LightBoardClay from '@/components/home-page/lightboardClay'
@@ -15,6 +16,8 @@ export default function Home() {
       <AboutUs />
       <LightBoardClay />
       <Services />
+      <LightBoardClay />
+      <CompletedProjects />
       <LightBoardClay />
     </>
   )
