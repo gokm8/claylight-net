@@ -6,9 +6,6 @@ import CompletedProjects from '@/components/home-page/completed-projects'
 // carousel
 import LogoCarousel from '@/components/home-page/logo-carousel'
 
-// lightboards
-import DarkLightBoard from '@/components/home-page/lightboard-dark'
-
 export default function Home() {
   return (
     <>
