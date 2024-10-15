@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState, useMemo } from 'react'
 
 export type PatternCell = '0' | '1' | '2' | '3'
 type Pattern = PatternCell[][]
@@ -142,7 +142,7 @@ function LightBoard({
   // We decide how many rows and columns of lights we need
   const containerRef = useRef<HTMLDivElement>(null)
   const [columns, setColumns] = useState(0)
-  const mergedColors = { ...defaultColors, ...colors }
+  const mergedColors = useMemo(() => ({ ...defaultColors, ...colors }), [colors])
 
   // We choose which font to use for our text
   const selectedFont = font === 'default' ? defaultFont : sevenSegmentFont
@@ -460,11 +460,15 @@ function LightBoard({
           onMouseDown={!disableDrawing ? handleMouseDown : undefined}
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
-          onMouseEnter={() =>
-            controlledHoverState === undefined && updateHoverState(true)
-          }
+          onMouseEnter={() => {
+            if (controlledHoverState === undefined) {
+              updateHoverState(true)
+            }
+          }}
           onMouseLeave={() => {
-            controlledHoverState === undefined && updateHoverState(false)
+            if (controlledHoverState === undefined) {
+              updateHoverState(false)
+            }
             handleInteractionEnd()
           }}
           onTouchStart={!disableDrawing ? handleTouchStart : undefined}
