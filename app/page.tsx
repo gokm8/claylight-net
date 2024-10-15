@@ -12,9 +12,9 @@ export default function Home() {
     <>
       <HeroTwo />
       <LogoCarousel />
-      <AboutUs />
-      <LightBoardClay />
       <Services />
+      <LightBoardClay />
+      <AboutUs />
     </>
   )
 }
