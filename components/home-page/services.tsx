@@ -77,10 +77,8 @@ export function Services() {
 
   return (
     <Section>
-      <Container>
-        <h1 className='mb-4 text-start text-4xl font-bold text-gray-50'>
-          SERVICES
-        </h1>
+      <Container className='flex flex-col items-end'>
+        <h1 className='mb-4 text-4xl font-bold text-gray-50'>SERVICES</h1>
         <div className='mb-4 flex space-x-2'>
           {ITEMS.map((item, index) => (
             <button
@@ -96,7 +94,7 @@ export function Services() {
             </button>
           ))}
         </div>
-        <div className='overflow-hidden border-t border-gray-700'>
+        <div className='w-full overflow-hidden border-t border-gray-700'>
           <TransitionPanel
             activeIndex={activeIndex}
             transition={{ duration: 0.2, ease: 'easeInOut' }}
@@ -107,12 +105,16 @@ export function Services() {
             }}
           >
             {ITEMS.map((item, index) => (
-              <div key={index} className='py-2'>
-                <h3 className='mb-2 font-medium text-gray-100'>
-                  {item.subtitle}
-                </h3>
-                <div className='md:w-1/2 h-[350px]'>
-                  <Balancer className='text-gray-400'>{item.content}</Balancer>
+              <div key={index} className='flex justify-end py-2'>
+                <div className='text-left md:w-1/2'>
+                  <h3 className='mb-2 font-medium text-gray-100'>
+                    {item.subtitle}
+                  </h3>
+                  <div className='h-[350px]'>
+                    <Balancer className='text-gray-400'>
+                      {item.content}
+                    </Balancer>
+                  </div>
                 </div>
               </div>
             ))}
