@@ -70,7 +70,6 @@ const LogoCarousel = () => {
                   height={125}
                   quality={95}
                   className='h-[75px] w-auto opacity-80 brightness-0 contrast-50 filter'
-                  loading='lazy'
                 />
               </li>
             ))}
