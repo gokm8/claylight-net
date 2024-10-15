@@ -1,6 +1,7 @@
 'use client' // Add this at the top
 
 import { useEffect, useRef } from 'react'
+import { Section, Container } from '../craft'
 import Image from 'next/image'
 
 // Definér logodata uden for komponenten
@@ -36,7 +37,7 @@ const LogoCarousel = () => {
   return (
     <div className='bg-gray-300 py-4 md:py-8'>
       <div className='mx-auto max-w-5xl'>
-        <div className='inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]'>
+        <div className='inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_left,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]'>
           <ul
             ref={logosRef}
             className='animate-infinite-scroll flex items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8'
