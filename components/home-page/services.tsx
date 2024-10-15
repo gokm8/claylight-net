@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { TransitionPanel } from '@/components/ui/transition-panel'
 import { Container, Section } from '../craft'
+import Balancer from 'react-wrap-balancer'
 
 export function Services() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -9,21 +10,68 @@ export function Services() {
   const ITEMS = [
     {
       title: 'Custom Lysinstallationer',
-      subtitle: 'Refining Visual Harmony',
-      content:
-        'Explore the principles of motion aesthetics that enhance the visual appeal of interfaces. Learn to balance timing, easing, and the flow of motion to create seamless user experiences.'
+      subtitle: 'Skræddersyede Løsninger til Unikke Oplevelser',
+      content: (
+        <>
+          Hos ClayLight specialiserer vi os i at designe og implementere
+          skræddersyede lysinstallationer, der skaber stemningsfulde og unikke
+          omgivelser.
+          <br />
+          <br />
+          Vores lysinstallationer er ideelle til både events og faste
+          installationer, hvor lyset spiller en afgørende rolle i at skabe den
+          rette atmosfære.
+          <br />
+          <br />
+          Med vores ekspertise indenfor avanceret lyssætning, kan vi omdanne
+          enhver lokation til en visuelt imponerende oplevelse, uanset om det er
+          en natklub, koncert eller privat begivenhed. Vores team arbejder tæt
+          sammen med dig for at sikre, at din vision bliver til virkelighed,
+          mens vi anvender den nyeste teknologi til at skabe en uforglemmelig
+          visuel oplevelse.
+        </>
+      )
     },
     {
       title: 'Elektronik til Events',
-      subtitle: 'Narrative and Expression',
-      content:
-        'Delve into how motion can be used as an artistic tool to tell stories and evoke emotions, making digital interactions feel more human and expressive.'
+      subtitle: 'Avanceret Teknologi til Enestående Begivenheder',
+      content: (
+        <>
+          ClayLight leverer banebrydende elektronik til events, hvor innovation
+          og pålidelighed er i fokus.
+          <br />
+          <br /> Vores løsninger inkluderer avanceret teknologisk udstyr og
+          specialfremstillede installationer, der sikrer, at dine arrangementer
+          skiller sig ud.
+          <br />
+          <br />
+          Vi leverer alt fra integrerede lys- og lydsystemer til interaktive
+          elektroniske elementer, der gør dine begivenheder mindeværdige. Vores
+          team af eksperter samarbejder med eventplanlæggere og arrangører for
+          at skabe unikke oplevelser, der opfylder selv de højeste
+          forventninger.
+        </>
+      )
     },
     {
       title: 'Custom Design',
-      subtitle: 'Mastering Motion Tools',
-      content:
-        'Gain proficiency in advanced techniques such as physics-based animations, 3D transformations, and complex sequencing to elevate your design skills and implementation.'
+      subtitle: 'Unikke Designløsninger til Visuel Forvandling',
+      content: (
+        <>
+          ClayLight tilbyder skræddersyede designløsninger, der forvandler
+          ethvert rum og event til en visuelt imponerende oplevelse.
+          <br />
+          <br />
+          Vores team af kreative specialister arbejder tæt sammen med dig for at
+          forstå dine ønsker og skabe unikke designs, der er både funktionelle
+          og æstetisk tiltalende.
+          <br />
+          <br />
+          Fra specialfremstillede lys- og elektronikinstallationer til kreative
+          scenedesigns og kunstneriske koncepter, leverer vi løsninger, der
+          skiller sig ud og efterlader et varigt indtryk.
+        </>
+      )
     }
   ]
 
@@ -63,7 +111,9 @@ export function Services() {
                 <h3 className='mb-2 font-medium text-gray-100'>
                   {item.subtitle}
                 </h3>
-                <p className='text-gray-400'>{item.content}</p>
+                <div className='md:w-1/2 h-[350px]'>
+                  <Balancer className='text-gray-400'>{item.content}</Balancer>
+                </div>
               </div>
             ))}
           </TransitionPanel>
