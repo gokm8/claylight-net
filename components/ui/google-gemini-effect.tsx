@@ -2,7 +2,6 @@
 import { cn } from '@/lib/utils'
 import { motion, MotionValue } from 'framer-motion'
 import React from 'react'
-import Balancer from 'react-wrap-balancer'
 
 const transition = {
   duration: 0,

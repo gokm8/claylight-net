@@ -1,7 +1,7 @@
 'use client' // Add this at the top
 
 import { useEffect, useRef } from 'react'
-import { Section, Container } from '../craft'
+
 import Image from 'next/image'
 
 // Definér logodata uden for komponenten

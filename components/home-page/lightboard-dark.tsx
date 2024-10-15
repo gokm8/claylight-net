@@ -1,7 +1,7 @@
 'use client'
 
-import { Container, Section } from '../craft'
-import { LightBoard, PatternCell } from '../ui/light-board'
+import { Section } from '../craft'
+import { LightBoard } from '../ui/light-board'
 
 export default function LightBoardDark() {
   return (
