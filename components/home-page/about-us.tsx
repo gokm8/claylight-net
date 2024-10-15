@@ -1,8 +1,16 @@
 import Image from 'next/image'
 import { Container, Section } from '../craft'
-import { Balancer } from 'react-wrap-balancer'
+import dynamic from 'next/dynamic'
+const Balancer = dynamic(() => import('react-wrap-balancer'), { ssr: false })
 
 export default function AbousUs() {
+  const stats = [
+    { value: '10+', label: 'Års Erfaring' },
+    { value: '50+', label: 'Projekter' },
+    { value: '100K', label: 'Tilfredse kunder' },
+    { value: '10.000+', label: 'Positive indtryk' }
+  ]
+
   return (
     <Section>
       <Container>
@@ -42,20 +50,18 @@ export default function AbousUs() {
           <div className='space-y-6'>
             <div className='overflow-hidden rounded-xl'>
               <Image
-                src='/placeholder.svg?height=400&width=600'
+                src='/placeholder.svg'
                 alt='Founders working together'
                 width={600}
                 height={400}
                 className='w-full object-cover'
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml;base64,..."
               />
             </div>
             <div className='grid grid-cols-2 gap-4'>
-              {[
-                { value: '10+', label: 'Års Erfaring' },
-                { value: '50+', label: 'Projekter' },
-                { value: '100K', label: 'Tilfredse kunder' },
-                { value: '10.000+', label: 'Positive indtryk' }
-              ].map((stat, index) => (
+              {stats.map((stat, index) => (
                 <div
                   key={index}
                   className='rounded-lg bg-gray-100 p-4 text-center'
