@@ -15,11 +15,8 @@ export default function Home() {
       <HeroTwo />
       <LogoCarousel />
       <AboutUs />
-      <DarkLightBoard />
       <Services />
-      <DarkLightBoard />
       <CompletedProjects />
-      <DarkLightBoard />
     </>
   )
 }
